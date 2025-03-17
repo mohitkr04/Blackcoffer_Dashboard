@@ -62,8 +62,8 @@ dashboard_project/
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
-cd <project-directory>
+git clone https://github.com/mohitkr04/Blackcoffer_Dashboard
+cd Blackcoffer_Dashboard
 ```
 
 2. Set up the backend:

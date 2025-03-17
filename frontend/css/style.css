@@ -1,0 +1,161 @@
+:root {
+    --primary-bg: #ffffff;
+    --card-bg: #ffffff;
+    --text-color: #333333;
+    --border-color: rgba(0,0,0,0.125);
+    --chart-bg: #ffffff;
+}
+
+[data-theme="dark"] {
+    --primary-bg: #1a1a1a;
+    --card-bg: #2d2d2d;
+    --text-color: #ffffff;
+    --border-color: rgba(255,255,255,0.125);
+    --chart-bg: #2d2d2d;
+}
+
+body {
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    transition: background-color 0.3s ease;
+}
+
+.navbar {
+    background: linear-gradient(135deg, #6e8efb, #4a6cf7);
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.filter-card {
+    background: linear-gradient(135deg, #ffffff, #f8f9fa);
+    border: 1px solid var(--border-color);
+}
+
+.summary-card {
+    padding: 1.5rem;
+    text-align: center;
+    color: white;
+    height: 100%;
+}
+
+.bg-gradient-primary {
+    background: linear-gradient(135deg, #6e8efb, #4a6cf7);
+}
+
+.bg-gradient-success {
+    background: linear-gradient(135deg, #2eca8b, #1a9c6e);
+}
+
+.bg-gradient-info {
+    background: linear-gradient(135deg, #17c1e8, #0c97b7);
+}
+
+.bg-gradient-warning {
+    background: linear-gradient(135deg, #fbcf33, #f8b425);
+}
+
+.form-select {
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    padding: 0.75rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-select:focus {
+    border-color: #4a6cf7;
+    box-shadow: 0 0 0 0.2rem rgba(74,108,247,0.25);
+}
+
+.chart-card {
+    height: 400px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+canvas {
+    max-height: 350px !important;
+    width: 100% !important;
+    transition: all 0.3s ease;
+}
+
+/* Loading animation */
+.loading {
+    position: relative;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 1rem;
+    }
+    
+    .summary-card {
+        margin-bottom: 1rem;
+    }
+    
+    .chart-card {
+        height: 300px;
+    }
+    
+    canvas {
+        max-height: 250px !important;
+    }
+}
+
+/* Theme toggle button */
+.theme-toggle {
+    position: relative;
+    margin-left: auto;
+}
+
+#themeToggle {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+#themeToggle:hover {
+    transform: rotate(180deg);
+}
+
+.card-title {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.form-label {
+    font-weight: 500;
+    color: #666;
+} 

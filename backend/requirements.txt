@@ -1,0 +1,9 @@
+fastapi==0.109.2
+uvicorn==0.30.1
+SQLAlchemy==2.0.29
+python-dotenv  # For loading environment variables
+python-jose
+passlib
+pandas>=1.5.3
+numpy>=1.23.5
+setuptools>=68.0.0

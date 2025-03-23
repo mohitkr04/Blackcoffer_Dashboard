@@ -87,7 +87,7 @@ uvicorn app.main:app --reload
 5. Start the frontend server:
 ```bash
 cd ../frontend
-python -m http.server 3000
+python -m http.server 3000 --bind 127.0.0.1
 ```
 
 6. Access the dashboard:
